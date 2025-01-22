@@ -1,0 +1,205 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.headernav {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    grid-template-areas: 
+    'title .'
+    'pagename navbar';
+    border-bottom: 1px solid #000;
+}
+
+.title h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.pagename h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: normal;
+}
+
+.pagename {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.navbar {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.navbar nav {
+    list-style: none;
+    text-align: right;
+}
+
+.navbar li {
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline;
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    color: #333; /* Default text color */
+}
+
+.navbar li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #333; /* Default underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar li:hover {
+    color: #000; /* Change the color on hover */
+}
+
+.navbar li:hover::after {
+    width: 100%; /* Underline animation on hover */
+    left: 0;
+    background: #000; /* Match the underline color to the hover color */
+}
+
+.portfolio {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.project:link {
+    text-decoration: none!important;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+}
+
+.project h4 {
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: normal;
+    color: #000;
+}
+
+.article{
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.article img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding-bottom: 20px;
+}
+
+.article p{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.article h3{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    
+    body {
+        padding: 2px;
+    }
+
+    .title h1 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    .pagename h2 {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+    }
+
+    .navbar {
+        text-align: center; /* Center the navbar items */
+        margin-top: 10px; /* Add spacing */
+        margin-right: 10px;
+    }
+
+    .navbar li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 0px; /* Add bottom margin */
+    }
+
+    .portfolio {
+        grid-template-rows: 1fr; /* Stack portfolio items */
+    }
+
+    .project h3 {
+        font-size: 1.2rem; /* Adjust project title font size */
+    }
+
+    .project h4 {
+        font-size: 1rem; /* Adjust project subtitle font size */
+    }
+}
