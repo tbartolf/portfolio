@@ -15,11 +15,39 @@ body {
     margin: 0 auto;
 }
 
+/* Typography */
+.manrope-400 {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.manrope-700 {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
 /* Header and Navigation */
 .container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+}
+
+.headernav-container {
+    width: 100%;
+}
+
+.headernav-headers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
 }
 
 .headernav {
@@ -36,12 +64,14 @@ body {
     font-size: 2.2rem;
     font-weight: 700;
     color: #000;
+    flex-grow: 0;
 }
 
 .pagename h2 {
     font-size: 1.6rem;
     font-weight: 500;
     color: #333;
+    flex-grow: 1;
 }
 
 .navbar nav {
