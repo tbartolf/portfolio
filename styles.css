@@ -19,14 +19,14 @@ body {
 .manrope-400 {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 400;
     font-style: normal;
 }
 
 .manrope-700 {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -127,6 +127,8 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .project:hover {
